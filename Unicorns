@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Magical Unicorns</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fefcfb;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    color: #b565a7;
+  }
+  h2 {
+    color: #a67cc5;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  .content {
+    max-width: 800px;
+    margin: auto;
+  }
+</style>
+</head>
+<body>
+<div class="content">
+<h1>Welcome to the Magical World of Unicorns!</h1>
+
+<p>Unicorns are legendary creatures often depicted as beautiful horses with a single spiraling horn on their forehead. They symbolize purity, grace, and magic.</p>
+
+<h2>Interesting Facts:</h2>
+<ul>
+  <li>Unicorns are mythical creatures found in various cultures around the world.</li>
+  <li>In Western mythology, they are often associated with innocence and enchantment.</li>
+  <li>Many stories describe unicorns as gentle, shy, and elusive animals.</li>
+</ul>
+
+<h2>Fun Things to Do:</h2>
+<ul>
+  <li>Draw your own unicorns and imagine their magical worlds.</li>
+  <li>Write your own stories about unicorn adventures.</li>
+  <li>Learn about how unicorns are used in art and literature.</li>
+</ul>
+
+<p>Thanks for visiting our unicorn wonderland! Stay magical!</p>
+</div>
+</body>
+</html>
