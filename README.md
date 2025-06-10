@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <h1>Tracy Conte</h1>
