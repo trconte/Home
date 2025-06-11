@@ -3,111 +3,110 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dropdown Menu Example</title>
+<title>My Website with Dropdown</title>
 <style>
-/* Basic styles for the page */
-    body {
-        margin: 0;
-        font-family: Georgia, serif;
-        background-color: #98ff98; /* Mint green */
-        background-image: url("https://raw.githubusercontent.com/trconte/Home/main/IMG_5155.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-
-        /* Overlay to fade the background image slightly */
-        position: relative;
-    }
-
-    /* To create a faded effect, overlay a semi-transparent layer */
-    body::before {
-        content: "";
-        position: absolute;
-        top: 0; 
-        left: 0;
-        width: 100%; 
-        height: 100%;
-        background: rgba(255, 255, 255, 0.4);
-        z-index: -1;
-    }
-
-    .content {
-        position: relative;
-        padding: 50px;
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-        text-align: center;
-        color: #333;
-        font-family: Georgia, serif;
+  /* Body styles */
   body {
-  margin: 0;
-  font-family: Georgia, serif;
-  background-color: #98ff98; /* Mint green */
-}
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #98ff98; /* Mint green */
+    background-image: url("https://raw.githubusercontent.com/trconte/Home/main/IMG_5155.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
 
-/* Dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin: 20px;
-}
+  /* Overlay for fade effect */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+  }
 
-/* Style for the dropdown button or label */
-.dropdown-button {
-  background-color: #333;
-  color: #fff;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-family: 'Georgia, serif;
-  font-weight: 600;
-  font-size: 1em;
-  transition: background-color 0.3s;
-}
+  /* Container for content */
+  .content {
+    position: relative;
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
 
-/* Hover style for button */
-.dropdown-button:hover {
-  background-color: #555;
-}
+  h1 {
+    text-align: center;
+    color: #333;
+    font-family: Georgia, serif;
+  }
 
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  margin-top: 5px;
-}
+  /* Dropdown styles */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+  }
 
-/* Links inside dropdown */
-.dropdown-content a {
-  display: block;
-  padding: 12px 16px;
-  text-decoration: none;
-  color: #333;
-  border-radius: 10px;
-}
+  .dropdown-button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px; /* Rounded pill shape */
+    cursor: pointer;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
 
-/* Hover effect for links */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+  .dropdown-button:hover {
+    background-color: #555;
+  }
 
-/* Show the dropdown when hovered */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-top: 5px;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 10px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* About me section styling */
+  .about-me {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #555;
+    font-family: Georgia, serif;
+  }
 </style>
 </head>
 <body>
@@ -121,21 +120,20 @@
   </div>
 </div>
 
-<!-- Your page content below -->
+<!-- Your page content -->
 <div class="content">
-
-  <div class="content">
-    <h1>Tracy Conte</h1>
-    <div style="text-align: center;">
-      <img src="https://raw.githubusercontent.com/trconte/Home/main/IMG_3753.jpg" alt="Pic of me" style="width: 250px; height: auto;"/>
-    </div>
-    <div class="about-me">
-      <h2>Author of "The Seed"</h2>
-      <h3>Light Academia, Coming-of-Age YA</h3>
-      <p>When fifteen-year-old Julia Stockheim is found on the roof of her middle school on the last day of eighth grade, her parents send her to Pairdodge Academy, a boarding school in the mountains. Julia is reluctant to get close to anyone at Pairdodge, and writes home to her best friend Michelle, always ending the letters with how much she misses her. She reminisces on times they spent together, but reassures her friend that no one could ever replace her, that she will never forget her.</p>
-      <p>The utopian school assigns Julia to a “Big” named Tracy, whose apparent mission all year is to torment her with kindness, and features student-centered assignments with teachers who genuinely care—something Julia’s never experienced before. “The Seed” is the freshman project, where every student is instructed to grow a seed, personalized to them based on their recommendation letter. While some students are happy to see their “Pairdodge Flowers” bloom, revealing their inner truths, other students aren’t, like her crush Kai'Mari, and her roommate Martina (who goes by "Marty") whose flower only blooms at night... </p>
-      <p>As her classmates’ seeds grow and bloom, Julia’s seed refuses to sprout, which makes her worry that she too will never grow to make true friends. Would they treat her differently if they knew what brought her to the roof that fateful day? With the help of her classmates and a secret all-girl society, Julia learns that everyone has a story, sometimes as dark as her own, and that everybody, including her, deserves a space to heal.</p>
-    </div>
+  <h1>Tracy Conte</h1>
+  <div style="text-align: center;">
+    <img src="https://raw.githubusercontent.com/trconte/Home/main/IMG_3753.jpg" alt="Pic of me" style="width: 250px; height: auto;"/>
   </div>
+  <div class="about-me">
+    <h2>Author of "The Seed"</h2>
+    <h3>Light Academia, Coming-of-Age YA</h3>
+    <p>When fifteen-year-old Julia Stockheim is found on the roof of her middle school on the last day of eighth grade, her parents send her to Pairdodge Academy, a boarding school in the mountains. Julia is reluctant to get close to anyone at Pairdodge, and writes home to her best friend Michelle, always ending the letters with how much she misses her. She reminisces on times they spent together, but reassures her friend that no one could ever replace her, that she will never forget her.</p>
+    <p>The utopian school assigns Julia to a “Big” named Tracy, whose apparent mission all year is to torment her with kindness, and features student-centered assignments with teachers who genuinely care—something Julia’s never experienced before. “The Seed” is the freshman project, where every student is instructed to grow a seed, personalized to them based on their recommendation letter. While some students are happy to see their “Pairdodge Flowers” bloom, revealing their inner truths, other students aren’t, like her crush Kai'Mari, and her roommate Martina (who goes by "Marty") whose flower only blooms at night... </p>
+    <p>As her classmates’ seeds grow and bloom, Julia’s seed refuses to sprout, which makes her worry that she too will never grow to make true friends. Would they treat her differently if they knew what brought her to the roof that fateful day? With the help of her classmates and a secret all-girl society, Julia learns that everyone has a story, sometimes as dark as her own, and that everybody, including her, deserves a space to heal.</p>
+  </div>
+</div>
+
 </body>
 </html>
