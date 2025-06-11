@@ -1,3 +1,73 @@
- <p>I was a high school math teacher of 10 years, and have always loved to read and travel to the mountains in my spare time. I also enjoy riddles and puzzles, and can't say no to a good escape room.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background-color: #98ff98; /* Mint green */
+
+        background-image: 
+                 url("https://raw.githubusercontent.com/trconte/Home/main/IMG_5155.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+            /* Overlay to fade the background image slightly */
+            position: relative;
+        }
+
+        /* To create a faded effect, overlay a semi-transparent layer */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%; 
+            height: 100%;
+            background: rgba(255, 255, 255, 0.4); /* Adjust opacity for fade effect */
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* semi-transparent background for readability */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+h1 {
+            text-align: center;
+            color: #333;
+            font-family: Georgia, serif;
+        }
+    
+.about-me {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-align: center;
+            color: #555;
+            font-family: Georgia,serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+ <div style="text-align: center;">
+         
+        </div>
+        <div class="about-me">
+            <h2>Bio</h2>
+            <p>I was a high school math teacher of 10 years, and have always loved to read and travel to the mountains in my spare time. I also enjoy riddles and puzzles, and can't say no to a good escape room.</p>
       <p>I wrote this novel last summer for my fourteen-year-old self because as a teenager I battled depression and suicidal thoughts, and wanted an outlet to heal. I became a teacher mostly because I wanted to be like the handful of impactful mentors that I had growing up, who truly saw me. I wrote them into my story to share with you.</p>
        <p>I now live with my two beautiful children, and my husband of twelve years. I live in North Carolina.</p>
+        </div>
+    </div>
+</body>
+</html>
