@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Spotify Playlist</title>
+<style>
+  /* Body and background styles */
+  body {
+    margin: 0;
+    font-family: Georgia, serif;
+  }
+
+  /* Background image with overlay for consistency with your pages */
+  .bg-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("https://raw.githubusercontent.com/trconte/Home/main/IMG_5155.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2; /* behind everything */
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: -1; /* above background, below content */
+  }
+
+  /* Content container styles (centered) */
+  .content {
+    position: relative;
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center; /* Center all inside text */
+  }
+
+  /* Heading style */
+  h1 {
+    font-family: Georgia, serif;
+    color: #333;
+  }
+
+  /* Optional: style for the embedded iframe to look cleaner */
+  iframe {
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Background layers -->
+<div class="bg-container"></div>
+<div class="overlay"></div>
+
+<!-- Page Content -->
+<div class="content">
+  <h1>My Spotify Playlist</h1>
+  <p>Enjoy my curated playlist!</p>
+  <!-- Spotify Embed -->
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1GMzReE9Gh4hx9cVuLIGbY?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
+</body>
+</html>
