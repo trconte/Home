@@ -179,7 +179,9 @@
     
   </div>
 </div>
+  <div class="overlay">
 <h1>What is your Pairdodge Flower?</h1>
+    <p>At Pairdodge Academy the freshman class are given a unique seed for an unknown flower based on their recommendation letters. The assignment is to grow and reflect on the meaning of the flower, and how you connect with it. Take the quiz to find out which Pairdodge Flower is yours.</p>
 
 <form id="flowerQuiz">
   <!-- Question 1 -->
@@ -378,7 +380,7 @@
       { q: 'q2', map: { red: 'carnation', yellow: 'daisy', purple: 'lavender', white: 'forgetMeNot' } },
       { q: 'q3', map: { adventure: 'sunflower', relaxing: 'lavender', social: 'clover', creative: 'orchid' } },
       { q: 'q4', map: { spring: 'zinnia', summer: 'sunflower', fall: 'dahlia', winter: 'fern' } },
-      { q: 'q5', map: { embrace: 'dahlia', resist: 'carnation', accept: 'orchid', fear: 'blackWalnut' } },
+      { q: 'q5', map: { embrace: 'dahlia', resist: 'carnation', accept: 'orchid', avoid: 'blackWalnut' } },
       { q: 'q6', map: { brave: 'dahlia', kind: 'clover', creative: 'cosmos', calm: 'lavender' } },
       { q: 'q7', map: { garden: 'rose', forest: 'fern', beach: 'dandelion', mountains: 'orchid' } },
       { q: 'q8', map: { reading: 'daisy', sport: 'zinnia', art: 'orchid', cooking: 'carnation' } },
@@ -413,32 +415,32 @@
     const flowerData = {
       rose: {
         name: "Rose",
-        description: "You are passionate, romantic, and appreciate beauty in all things. Like the rose, you embrace love and connection.",
+        description: "You are passionate, romantic, and appreciate beauty in all things.  Like the rose, you embrace love and connection. However, you have a reserved, protected side to you that is liable to prick those who get too close to your thorns.",
         image: "https://images.unsplash.com/photo-1523359342654-4b1f7f8f4b3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       },
       dandelion: {
         name: "Dandelion",
-        description: "You're resilient, optimistic, and love change. Like the dandelion, you thrive in tough conditions and spread positivity.",
+        description: "You're resilient, optimistic, and love change. Others who do don't appreciate your light may overlook you, however, but don't let them get you down. Like the dandelion, you thrive in tough conditions and spread positivity.",
         image: "https://images.unsplash.com/photo-1549887534-7c6808457d7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       },
       sunflower: {
         name: "Sunflower",
-        description: "You are cheerful, energetic, and love to be in the spotlight. Like the sunflower, you turn towards the sun and inspire others.",
+        description: "You are cheerful, energetic, and love to be in the spotlight. Like the sunflower, you turn towards the sun and inspire others. Keep being you, and know that your kindness is genuine; you never know who will need your comfort and care the most.",
         image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       },
       orchid: {
         name: "Orchid",
-        description: "Elegant, mysterious, and refined, you value beauty and grace in everything you do.",
+        description: "Elegant, mysterious, and refined, you value perseverance and grace in everything you do. It may take you time to grow, but when given the right conditions, you will flourish.",
         image: "https://images.unsplash.com/photo-1545190897-4d4b8b645ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       },
       fern: {
         name: "Fern",
-        description: "You are calm, grounded, and resilient. Like the fern, you thrive in quiet strength and adaptability.",
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        description: "You are calm, grounded, and wise. Like the ancient fern, you thrive in quiet strength and adaptability.",
+        image: "https://raw.githubusercontent.com/trconte/Home/main/IMG_3446.jpg"
       },
       lavender: {
         name: "Lavender",
-        description: "You are gentle, calming, and loving peace. Like lavender, you bring tranquility to those around you.",
+        description: "You are gentle, calming, and love peace. Like lavender, you bring tranquility to those around you.",
         image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       },
       carnation: {
@@ -446,24 +448,30 @@
         description: "You are caring, affectionate, and resilient. Like the carnation, you stand strong and show love through your actions.",
         image: "https://images.unsplash.com/photo-1545190897-4d4b8b645ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       },
+
+      dahlia: {
+        name: "Dahlia",
+        description: "You have an inner beauty and inner strengh about you, capable of thriving in harsh conditions. Like the dahlia, you show you care through empathy in shared experiences, and are a creative soul who embraces positive change.",
+        image: "https://raw.githubusercontent.com/trconte/Home/main/IMG_3564.jpg"
+  },
       cosmos: {
         name: "Cosmos",
-        description: "You are charismatic, joyful, and spontaneous. Like the cosmos, you add sparkle wherever you go.",
+        description: "You are charismatic, joyful, and spontaneous. Like the cosmos, you add sparkle wherever you go, even when others don't necessarily understand your vibe. Be yourself, in your own cosmic realm!",
         image: "https://images.unsplash.com/photo-1549887534-7c6808457d7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       },
       daisy: {
         name: "Daisy",
-        description: "You are cheerful, innocent, and optimistic. Like the daisy, you spread happiness and simplicity.",
+        description: "You are cheerful and optimistic, (is it because you've developed it as a defense mechanism?). Like the daisy, you spread happiness and simplicity. You may have negative thoughts from your past that crop up from time to time; don't forget to deadhead them!",
         image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       },
       zinnia: {
         name: "Zinnia",
-        description: "You are vibrant, energetic, and love life. Like zinnias, you brighten up any space.",
+        description: "You are vibrant, energetic, and love life. You are also very proud of who you are, and what you have accomplished. Like zinnias, you brighten up any space.",
         image: "https://images.unsplash.com/photo-1549887534-7c6808457d7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       },
       forgetMeNot: {
         name: "Forget-Me-Not",
-        description: "You are loyal, thoughtful, and cherish memories. Like the forget-me-not, you hold loved ones close.",
+        description: "You are loyal, thoughtful, and cherish memories. Do you often look at old photos or Instagram posts to remember the good times? Like the forget-me-not, you hold loved ones close, but don't forget that it's okay to make new friends too.",
         image: "https://images.unsplash.com/photo-1549887534-7c6808457d7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       }
     };
@@ -471,7 +479,7 @@
     // Fallback if no flowers found
     const resultData = flowerData[matchFlower] || {
       name: "Unique Flower",
-      description: "You are one of a kind! Take the quiz again to find your perfect flower match.",
+      description: "You are one of a kind! (oops, no match yet!) Try taking the quiz again or changing an answer or two to find your perfect flower match.",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
     };
 
