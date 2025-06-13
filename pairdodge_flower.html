@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Which Flower Are You?</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .question {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  select {
+    width: 100%;
+    padding: 8px;
+    font-family: Georgia, serif;
+  }
+
+  button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 24px;
+    font-family: Georgia, serif;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+  }
+
+  #result {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  /* Optional: styling for the result box */
+  .result-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+<h1>What is your Pairdodge Flower?</h1>
+
+<form id="flowerQuiz">
+  <div class="question">
+    <label for="q1">1. Which trait do you value most?</label>
+    <select id="q1" required>
+      <option value="">Select an option</option>
+      <option value="love">Love & Passion</option>
+      <option value="growth">Growth & Renewal</option>
+      <option value="beauty">Beauty & Elegance</option>
+      <option value="resilience">Resilience & Strength</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q2">2. Which color appeals to you most?</label>
+    <select id="q2" required>
+      <option value="">Select an option</option>
+      <option value="red">Red</option>
+      <option value="yellow">Yellow</option>
+      <option value="purple">Purple</option>
+      <option value="white">White</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q3">3. What's your ideal way to spend a weekend?</label>
+    <select id="q3" required>
+      <option value="">Select an option</option>
+      <option value="adventure">Exploring nature</option>
+      <option value="relaxing">Relaxing at home</option>
+      <option value="social">Spending time with friends</option>
+      <option value="creative">Creating art or music</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q4">4. Which season do you prefer?</label>
+    <select id="q4" required>
+      <option value="">Select an option</option>
+      <option value="spring">Spring</option>
+      <option value="summer">Summer</option>
+      <option value="fall">Fall</option>
+      <option value="winter">Winter</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q5">5. What's your attitude towards change?</label>
+    <select id="q5" required>
+      <option value="">Select an option</option>
+      <option value="embrace">Embrace it</option>
+      <option value="resist">Resist it</option>
+      <option value="accept">Accept it calmly</option>
+      <option value="fear">Fear it</option>
+    </select>
+  </div>
+
+  <!-- Add more questions as needed for a total of 15 -->
+  <!-- For simplicity, I'll add 10 more questions quickly: -->
+
+  <div class="question">
+    <label for="q6">6. Which word best describes you?</label>
+    <select id="q6" required>
+      <option value="">Select an option</option>
+      <option value="brave">Brave</option>
+      <option value="kind">Kind</option>
+      <option value="creative">Creative</option>
+      <option value="calm">Calm</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q7">7. Which environment do you prefer?</label>
+    <select id="q7" required>
+      <option value="">Select an option</option>
+      <option value="garden">Garden</option>
+      <option value="forest">Forest</option>
+      <option value="beach">Beach</option>
+      <option value="mountains">Mountains</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q8">8. What's your favorite activity?</label>
+    <select id="q8" required>
+      <option value="">Select an option</option>
+      <option value="reading">Reading</option>
+      <option value="sport">Sport</option>
+      <option value="art">Art</option>
+      <option value="cooking">Cooking</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q9">9. How do you handle stress?</label>
+    <select id="q9" required>
+      <option value="">Select an option</option>
+      <option value="meditate">Meditate</option>
+      <option value="exercise">Exercise</option>
+      <option value="talk">Talk to friends</option>
+      <option value="ignore">Ignore it</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q10">10. What's your favorite time of day?</label>
+    <select id="q10" required>
+      <option value="">Select an option</option>
+      <option value="morning">Morning</option>
+      <option value="afternoon">Afternoon</option>
+      <option value="evening">Evening</option>
+      <option value="night">Night</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q11">11. Which quality do you admire most?</label>
+    <select id="q11" required>
+      <option value="">Select an option</option>
+      <option value="humility">Humility</option>
+      <option value="courage">Courage</option>
+      <option value="wisdom">Wisdom</option>
+      <option value="kindness">Kindness</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q12">12. What's your favorite hobby?</label>
+    <select id="q12" required>
+      <option value="">Select an option</option>
+      <option value="gardening">Gardening</option>
+      <option value="music">Music</option>
+      <option value="travel">Travel</option>
+      <option value="crafts">Crafts</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q13">13. Do you prefer routine or spontaneity?</label>
+    <select id="q13" required>
+      <option value="">Select an option</option>
+      <option value="routine">Routine</option>
+      <option value="spontaneous">Spontaneous</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q14">14. What's your main motivation?</label>
+    <select id="q14" required>
+      <option value="">Select an option</option>
+      <option value="love">Love</option>
+      <option value="achievement">Achievement</option>
+      <option value="learning">Learning</option>
+      <option value="peace">Peace</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="q15">15. How do you see yourself?</label>
+    <select id="q15" required>
+      <option value="">Select an option</option>
+      <option value="leader">Leader</option>
+      <option value="dreamer">Dreamer</option>
+      <option value="thinker">Thinker</option>
+      <option value="protector">Protector</option>
+    </select>
+  </div>
+
+  <button type="button" onclick="calculateResult()">See Your Flower Match</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+  function calculateResult() {
+    // Initialize counts for each flower
+    const tallies = {
+      gladiolus: 0,
+      clover: 0,
+      dandelion: 0,
+      eveningPrimrose: 0,
+      dahlia: 0,
+      sunflower: 0,
+      cosmos: 0,
+      rose: 0,
+      fern: 0,
+      forgetMeNot: 0,
+      carnation: 0,
+      orchid: 0,
+      lavender: 0,
+      blackWalnut: 0,
+      zinnia: 0,
+      daisy: 0
+    };
+
+    // Map questions to flowers based on answers
+    const answers = [
+      { q: 'q1', map: { love: 'rose', growth: 'dandelion', beauty: 'orchid', resilience: 'fern' } },
+      { q: 'q2', map: { red: 'carnation', yellow: 'daisy', purple: 'lavender', white: 'forgetMeNot' } },
+      { q: 'q3', map: { adventure: 'sunflower', relaxing: 'lavender', social: 'clover', creative: 'orchid' } },
+      { q: 'q4', map: { spring: 'zinnia', summer: 'sunflower', fall: 'dahlia', winter: 'fern' } },
+      { q: 'q5', map: { embrace: 'dahlia', resist: 'carnation', accept: 'orchid', fear: 'blackWalnut' } },
+      { q: 'q6', map: { brave: 'dahlia', kind: 'clover', creative: 'cosmos', calm: 'lavender' } },
+      { q: 'q7', map: { garden: 'rose', forest: 'fern', beach: 'dandelion', mountains: 'orchid' } },
+      { q: 'q8', map: { reading: 'daisy', sport: 'zinnia', art: 'orchid', cooking: 'carnation' } },
+      { q: 'q9', map: { meditate: 'lavender', exercise: 'sunflower', talk: 'clover', ignore: 'blackWalnut' } },
+      { q: 'q10', map: { morning: 'daisy', afternoon: 'cosmos', evening: 'orchid', night: 'fern' } },
+      { q: 'q11', map: { humility: 'forgetMeNot', courage: 'dahlia', wisdom: 'orchid', kindness: 'clover' } },
+      { q: 'q12', map: { gardening: 'fern', music: 'lavender', travel: 'sunflower', crafts: 'carnation' } },
+      { q: 'q13', map: { routine: 'carnation', spontaneous: 'zinnia' } },
+      { q: 'q14', map: { love: 'rose', achievement: 'dahlia', learning: 'orchid', peace: 'lavender' } },
+      { q: 'q15', map: { leader: 'sunflower', dreamer: 'daisy', thinker: 'cosmos', protector: 'fern' } }
+    ];
+
+    // Loop through questions and tally
+    answers.forEach(item => {
+      const answer = document.getElementById(item.q).value;
+      if (answer && item.map[answer]) {
+        tallies[item.map[answer]]++;
+      }
+    });
+
+    // Find the flower with the highest tally
+    let maxCount = -1;
+    let matchFlower = "";
+    for (const flower in tallies) {
+      if (tallies[flower] > maxCount) {
+        maxCount = tallies[flower];
+        matchFlower = flower;
+      }
+    }
+
+    // Map flower keys to display names
+    const flowerNames = {
+      gladiolus: "Gladiolus",
+      clover: "Clover",
+      dandelion: "Dandelion",
+      eveningPrimrose: "Evening Primrose",
+      dahlia: "Dahlia",
+      sunflower: "Sunflower",
+      cosmos: "Cosmos",
+      rose: "Rose",
+      fern: "Fern",
+      forgetMeNot: "Forget-Me-Not",
+      carnation: "Carnation",
+      orchid: "Orchid",
+      lavender: "Lavender",
+      blackWalnut: "Black Walnut",
+      zinnia: "Zinnia",
+      daisy: "Daisy"
+    };
+
+    document.getElementById('result').innerHTML = 
+      `<div class="result-box">Your flower match is: <strong>${flowerNames[matchFlower]}</strong></div>`;
+  }
+</script>
+
+</body>
+</html>
