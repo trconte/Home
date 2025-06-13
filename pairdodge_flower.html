@@ -478,8 +478,14 @@
         image: "https://images.unsplash.com/photo-1549887534-7c6808457d7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
       }
     };
+ // Fallback if no flowers found
+    const resultData = flowerData[matchFlower] || {
+      name: "Unique Flower",
+      description: "You are one of a kind! (oops, no match yet!) Try taking the quiz again or changing an answer or two to find your perfect flower match.",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+    };
 
-    // Display result
+    // Show result
     document.getElementById('result').innerHTML = `
       <div class="flower-info">
         <div class="flower-name">${resultData.name}</div>
